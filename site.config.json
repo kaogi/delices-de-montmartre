@@ -1,0 +1,45 @@
+{
+  "site_name": "Délices de Montmartre",
+  "site_tagline": "L'art de la pâtisserie française depuis 1987",
+  "pages": [
+    {
+      "title": "Accueil",
+      "slug": "accueil",
+      "description": "Découvrez notre boutique de pâtisserie artisanale au cœur de Paris, où tradition et créativité se rencontrent pour créer des délices uniques.",
+      "content_type": "home"
+    },
+    {
+      "title": "Nos Créations",
+      "slug": "nos-creations",
+      "description": "Explorez notre gamme de pâtisseries artisanales : éclairs, macarons, tartes, gâteaux sur mesure et spécialités saisonnières préparés avec passion.",
+      "content_type": "services"
+    },
+    {
+      "title": "À Propos",
+      "slug": "a-propos",
+      "description": "L'histoire de notre maison, notre savoir-faire artisanal transmis de génération en génération et notre engagement pour la qualité des produits français.",
+      "content_type": "about"
+    }
+  ],
+  "color_scheme": {
+    "primary": "#8B4513",
+    "secondary": "#F4E4BC",
+    "accent": "#D4A574",
+    "background": "#FFFEF7",
+    "text": "#2C1810"
+  },
+  "navigation": [
+    {
+      "label": "Accueil",
+      "slug": "accueil"
+    },
+    {
+      "label": "Nos Créations",
+      "slug": "nos-creations"
+    },
+    {
+      "label": "À Propos",
+      "slug": "a-propos"
+    }
+  ]
+}

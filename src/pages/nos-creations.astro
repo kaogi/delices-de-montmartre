@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const title = "Nos Créations";
+const description = "Découvrez les créations artisanales de Délices de Montmartre : éclairs, macarons, tartes, gâteaux sur mesure et spécialités saisonnières depuis 1987.";
+const keywords = ["p\u00e2tisserie artisanale", "\u00e9clairs macarons", "g\u00e2teaux sur mesure", "p\u00e2tissier Montmartre", "sp\u00e9cialit\u00e9s saisonni\u00e8res", "tartes fran\u00e7aises", "p\u00e2tisserie traditionnelle"];
+---
+
+<BaseLayout {title} {description} {keywords}>
+  <Hero
+    title="L\'Art de la Pâtisserie Française à Montmartre"
+    subtitle="Découvrez nos créations artisanales préparées avec passion selon les traditions françaises depuis 1987"
+  />
+
+  <!-- Content sections -->
+  <div class="content-wrapper">
+    <section class="content-section">
+      <h2>Nos Pâtisseries Signature</h2>
+      <p>Chez Délices de Montmartre, chaque création est un chef-d&#39;œuvre artisanal. Nos éclairs au chocolat onctueux, nos macarons aux saveurs raffinées et nos tartes aux fruits de saison reflètent notre expertise acquise depuis plus de 35 ans. Chaque pâtisserie est façonnée à la main avec des ingrédients premium sélectionnés pour leur qualité exceptionnelle.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Gâteaux Sur Mesure</h2>
+      <p>Transformez vos moments spéciaux en souvenirs inoubliables avec nos gâteaux personnalisés. De l&#39;anniversaire intime au mariage somptueux, nos maîtres pâtissiers créent des œuvres uniques adaptées à vos goûts et à votre événement. Consultez-nous pour donner vie à vos rêves sucrés les plus audacieux.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Spécialités Saisonnières</h2>
+      <p>Au rythme des saisons, notre carte se renouvelle pour vous offrir le meilleur de chaque période. Galettes des Rois artisanales en janvier, bûches de Noël créatives en décembre, tartes aux fruits d&#39;été... Nos spécialités saisonnières célèbrent les saveurs authentiques et les traditions françaises avec une touche de modernité.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Tradition et Innovation</h2>
+      <p>Héritiers d&#39;un savoir-faire traditionnel, nous n&#39;hésitons pas à innover pour surprendre vos papilles. Nos recettes classiques côtoient des créations contemporaines audacieuses, toujours dans le respect de la qualité française. Cette alliance entre tradition et modernité fait de chaque visite chez Délices de Montmartre une nouvelle découverte gustative.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Commandez Vos Favoris</h2>
+      <p>Retrouvez toutes nos créations dans notre boutique de Montmartre ou passez commande pour vos événements spéciaux. Nos équipes se feront un plaisir de vous conseiller et de préparer vos pâtisseries préférées avec le même amour du détail qui nous anime depuis 1987. Contactez-nous pour découvrir nos disponibilités et tarifs.</p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .content-section {
+    padding: 4rem 0;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary, #2563eb);
+  }
+
+  .content-section p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--color-text, #1f2937);
+    margin-bottom: 1rem;
+  }
+
+  .content-section:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+  }
+</style>

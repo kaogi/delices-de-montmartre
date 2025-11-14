@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const title = "Accueil";
+const description = "Délices de Montmartre : pâtisserie artisanale parisienne depuis 1987. Découvrez nos créations uniques, spécialités françaises et commandes personnalisées.";
+const keywords = ["p\u00e2tisserie artisanale Paris", "Montmartre", "p\u00e2tisserie fran\u00e7aise", "macarons Paris", "croissants artisanaux", "desserts sur mesure", "boulangerie traditionnelle", "p\u00e2tissier Paris", "sp\u00e9cialit\u00e9s fran\u00e7aises"];
+---
+
+<BaseLayout {title} {description} {keywords}>
+  <Hero
+    title="L\'Art de la Pâtisserie Française au Cœur de Montmartre"
+    subtitle="Depuis 1987, nous créons des délices artisanaux uniques alliant tradition parisienne et créativité moderne pour éveiller vos papilles"
+  />
+
+  <!-- Content sections -->
+  <div class="content-wrapper">
+    <section class="content-section">
+      <h2>Notre Savoir-Faire Artisanal</h2>
+      <p>Chez Délices de Montmartre, chaque création est le fruit d&#39;un savoir-faire transmis de génération en génération. Nos maîtres pâtissiers sélectionnent minutieusement les meilleurs ingrédients français pour confectionner quotidiennement nos spécialités. De nos croissants dorés aux éclairs délicats, en passant par nos tartes aux fruits de saison, chaque produit reflète notre passion pour l&#39;excellence et l&#39;authenticité de la pâtisserie française.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Créations Signature et Spécialités Saisonnières</h2>
+      <p>Découvrez nos créations exclusives qui font la renommée de notre boutique parisienne. Nos Paris-Brest revisités, nos macarons aux saveurs originales et nos entremets d&#39;exception sont imaginés par notre équipe créative. Nous proposons également des spécialités saisonnières qui célèbrent les saveurs de chaque moment de l&#39;année : galettes des rois artisanales, bûches de Noël d&#39;exception et pâtisseries de Pâques traditionnelles.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Une Boutique Authentique à Montmartre</h2>
+      <p>Située dans le quartier emblématique de Montmartre, notre pâtisserie vous accueille dans un cadre chaleureux et authentique. L&#39;atmosphère de notre boutique reflète l&#39;âme parisienne avec ses vitrines gourmandes et son décor traditionnel. Venez découvrir l&#39;ambiance unique de notre établissement familial, où chaque visite devient un moment de plaisir et de découverte gustative au cœur de Paris.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Commandes Personnalisées et Événements</h2>
+      <p>Pour vos occasions spéciales, notre équipe réalise des créations sur mesure adaptées à vos envies. Mariages, anniversaires, baptêmes ou événements d&#39;entreprise : nous concevons des pâtisseries personnalisées qui marqueront vos moments précieux. Consultez-nous pour discuter de vos projets et bénéficier de notre expertise pour créer des desserts d&#39;exception qui raviront vos invités.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Tradition et Innovation Depuis 1987</h2>
+      <p>Forte de plus de 35 ans d&#39;expérience, notre pâtisserie artisanale perpétue les traditions françaises tout en innovant constamment. Cette approche nous permet de proposer des classiques revisités et des créations modernes qui séduisent une clientèle fidèle et exigeante. Chaque jour, nous renouvelons notre engagement à vous offrir des pâtisseries d&#39;excellence, témoins du raffinement de l&#39;art pâtissier français.</p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .content-section {
+    padding: 4rem 0;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary, #2563eb);
+  }
+
+  .content-section p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--color-text, #1f2937);
+    margin-bottom: 1rem;
+  }
+
+  .content-section:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+  }
+</style>

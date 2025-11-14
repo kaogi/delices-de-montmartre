@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string[];
+  ogImage?: string;
+  canonical?: string;
+}
+
+const { title, description, keywords = [], ogImage, canonical } = Astro.props;
+const siteUrl = Astro.site?.toString() || 'https://{{DOMAIN}}';
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).toString();
+const ogImageUrl = ogImage || `${siteUrl}/og-image.jpg`;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImageUrl} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="{{GOOGLE_FONTS_URL}}" rel="stylesheet" />
+
+    <!-- Preload critical assets -->
+    <link rel="preload" as="style" href="/styles/global.css" />
+  </head>
+  <body class="font-body text-neutral-900 bg-white antialiased">
+    <slot name="header" />
+
+    <main>
+      <slot />
+    </main>
+
+    <slot name="footer" />
+
+    <!-- Schema.org JSON-LD -->
+    <slot name="schema" />
+  </body>
+</html>

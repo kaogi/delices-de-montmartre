@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const title = "À Propos";
+const description = "Découvrez l\'histoire de Délices de Montmartre, pâtisserie artisanale parisienne depuis 1987. Savoir-faire traditionnel et produits français d\'exception.";
+const keywords = ["p\u00e2tisserie fran\u00e7aise", "artisan p\u00e2tissier Paris", "Montmartre", "savoir-faire traditionnel", "produits fran\u00e7ais", "p\u00e2tisserie artisanale", "macarons Paris", "viennoiseries", "tradition fran\u00e7aise", "qualit\u00e9 artisanale"];
+---
+
+<BaseLayout {title} {description} {keywords}>
+  <Hero
+    title="L\'Art de la Pâtisserie Française Depuis 1987"
+    subtitle="Découvrez l\'histoire de Délices de Montmartre, une maison où tradition et excellence se transmettent de génération en génération au cœur de Paris."
+  />
+
+  <!-- Content sections -->
+  <div class="content-wrapper">
+    <section class="content-section">
+      <h2>Notre Histoire</h2>
+      <p>Fondée en 1987 au pied de la Butte Montmartre, Délices de Montmartre est née de la passion de Maître Pâtissier Pierre Dubois pour l&#39;art culinaire français. Inspiré par les traditions séculaires de la pâtisserie parisienne et par l&#39;effervescence artistique du quartier, Pierre a créé cette maison avec une vision : préserver et transmettre l&#39;authenticité des saveurs françaises. Aujourd&#39;hui, son fils Antoine perpétue cet héritage avec la même exigence de qualité, faisant de notre pâtisserie une référence incontournable des gourmets parisiens et des visiteurs du monde entier.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Notre Savoir-Faire Artisanal</h2>
+      <p>Chaque création de Délices de Montmartre naît de techniques artisanales transmises de maître à apprenti depuis plus de 35 ans. Nos pâtissiers travaillent exclusivement avec des méthodes traditionnelles : pétrissage à la main, cuisson au four pierre, et assemblage minutieux selon les règles de l&#39;art français. Cette approche artisanale nous permet de garantir la texture parfaite de nos viennoiseries, la finesse de nos entremets et l&#39;équilibre délicat de nos macarons. Nous perpétuons ainsi les gestes ancestraux qui font la renommée de la pâtisserie française dans le monde entier.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>L&#39;Excellence des Produits Français</h2>
+      <p>Notre engagement pour la qualité commence par la sélection rigoureuse de nos matières premières. Nous privilégions exclusivement les produits français : beurre AOP de Normandie, farines de blé de Beauce, fruits de saison des vergers français, et chocolats grands crus sélectionnés chez les meilleurs chocolatiers français. Cette démarche exigeante nous permet de proposer des pâtisseries aux saveurs authentiques, respectueuses des terroirs français et de leurs traditions culinaires. Chaque ingrédient est choisi pour sa qualité exceptionnelle et sa traçabilité irréprochable.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Notre Engagement Qualité</h2>
+      <p>La qualité chez Délices de Montmartre ne se limite pas à nos produits, elle s&#39;étend à notre approche globale. Nous produisons quotidiennement nos créations pour garantir fraîcheur et saveurs optimales. Notre laboratoire respecte les normes les plus strictes d&#39;hygiène et de sécurité alimentaire. Nous nous engageons également dans une démarche écoresponsable : réduction des emballages, partenariats avec des producteurs locaux, et valorisation des circuits courts. Cette philosophie nous permet de concilier tradition artisanale et conscience environnementale pour le plaisir de nos clients.</p>
+    </section>
+
+    <section class="content-section">
+      <h2>L&#39;Esprit Montmartre</h2>
+      <p>Située dans le quartier mythique de Montmartre, notre pâtisserie puise son inspiration dans l&#39;âme artistique et bohème du lieu. Comme les peintres de la place du Tertre, nous considérons chaque création comme une œuvre d&#39;art comestible. L&#39;esprit convivial et authentique de Montmartre se retrouve dans notre accueil chaleureux et notre passion partagée pour les belles choses. Notre boutique, véritable écrin aux saveurs françaises, invite à la découverte et à l&#39;échange, perpétuant ainsi l&#39;tradition d&#39;hospitalité qui fait le charme éternel de ce quartier légendaire de Paris.</p>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .content-section {
+    padding: 4rem 0;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary, #2563eb);
+  }
+
+  .content-section p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: var(--color-text, #1f2937);
+    margin-bottom: 1rem;
+  }
+
+  .content-section:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+  }
+</style>
